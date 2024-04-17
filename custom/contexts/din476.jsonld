@@ -1,0 +1,54 @@
+{
+"@context": {
+"din": "http://github.com/oytla/schemaExtensions/custom/contexts/din476#",
+
+"PaperSize": "din:PaperSize",
+"name": "din:name",
+"width": {
+  "@id": "din:width",
+  "@type": "xsd:double"
+},
+"height": {
+  "@id": "din:height", 
+  "@type": "xsd:double"
+},
+"unit": "din:unit",
+
+"A0": "din:A0",
+"A1": "din:A1", 
+"A2": "din:A2",
+"A3": "din:A3",
+"A4": "din:A4",
+"A5": "din:A5",
+"A6": "din:A6",
+"A7": "din:A7",
+"A8": "din:A8",
+"A9": "din:A9",
+"A10": "din:A10",
+
+"B0": "din:B0",
+"B1": "din:B1",
+"B2": "din:B2", 
+"B3": "din:B3",
+"B4": "din:B4",
+"B5": "din:B5",
+"B6": "din:B6",
+"B7": "din:B7",
+"B8": "din:B8",
+"B9": "din:B9",
+"B10": "din:B10",
+
+"C0": "din:C0",
+"C1": "din:C1",
+"C2": "din:C2",
+"C3": "din:C3", 
+"C4": "din:C4",
+"C5": "din:C5",
+"C6": "din:C6",
+"C7": "din:C7",
+"C8": "din:C8",
+"C9": "din:C9",
+"C10": "din:C10"
+
+}
+}
