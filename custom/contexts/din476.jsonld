@@ -1,320 +1,597 @@
 {
-  "@context": {
-    "din": "https://raw.githubusercontent.com/oytla/schemaExtensions/main/custom/contexts/din476.jsonld#",
-    
-    "PaperSize": "din:PaperSize",
-    "name": "din:name",
-    "width": {
-      "@id": "din:width",
-      "@type": "xsd:double"
+    "@context": {
+        "schema": "https://raw.githubusercontent.com/oytla/schemaExtensions/main/custom/contexts/din476.jsonld#",
+        "din": "http://example.com/din#",
+        "identifier": "schema:identifier",
+        "name": "schema:name",
+        "conformsTo": "schema:conformsTo",
+        "isPartOf": "schema:isPartOf",
+        "width": {
+            "@id": "schema:width",
+            "@type": "schema:Measurement"
+        },
+        "height": {
+            "@id": "schema:height",
+            "@type": "schema:Measurement"
+        },
+        "unitCode": {
+            "@id": "schema:unitCode",
+            "@type": "schema:Text"
+        }
     },
-    "height": {
-      "@id": "din:height", 
-      "@type": "xsd:double"
-    },
-    "unit": "din:unit",
-
-    "A0": "din:A0",
-    "A1": "din:A1", 
-    "A2": "din:A2",
-    "A3": "din:A3",
-    "A4": "din:A4",
-    "A5": "din:A5",
-    "A6": "din:A6",
-    "A7": "din:A7",
-    "A8": "din:A8",
-    "A9": "din:A9",
-    "A10": "din:A10",
-
-    "B0": "din:B0",
-    "B1": "din:B1",
-    "B2": "din:B2", 
-    "B3": "din:B3",
-    "B4": "din:B4",
-    "B5": "din:B5",
-    "B6": "din:B6",
-    "B7": "din:B7",
-    "B8": "din:B8",
-    "B9": "din:B9",
-    "B10": "din:B10",
-
-    "C0": "din:C0",
-    "C1": "din:C1",
-    "C2": "din:C2",
-    "C3": "din:C3", 
-    "C4": "din:C4",
-    "C5": "din:C5",
-    "C6": "din:C6",
-    "C7": "din:C7",
-    "C8": "din:C8",
-    "C9": "din:C9",
-    "C10": "din:C10"
-  },
-
-  "@graph": [
-    {
-      "@id": "din:A0",
-      "@type": "PaperSize",
-      "name": "A0",
-      "width": 841,
-      "height": 1189,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:A1",
-      "@type": "PaperSize",
-      "name": "A1",
-      "width": 594,
-      "height": 841,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:A2",
-      "@type": "PaperSize",
-      "name": "A2",
-      "width": 420,
-      "height": 594,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:A3",
-      "@type": "PaperSize",
-      "name": "A3",
-      "width": 297,
-      "height": 420,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:A4",
-      "@type": "PaperSize",
-      "name": "A4",
-      "width": 210,
-      "height": 297,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:A5",
-      "@type": "PaperSize",
-      "name": "A5",
-      "width": 148,
-      "height": 210,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:A6",
-      "@type": "PaperSize",
-      "name": "A6",
-      "width": 105,
-      "height": 148,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:A7",
-      "@type": "PaperSize",
-      "name": "A7",
-      "width": 74,
-      "height": 105,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:A8",
-      "@type": "PaperSize",
-      "name": "A8",
-      "width": 52,
-      "height": 74,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:A9",
-      "@type": "PaperSize",
-      "name": "A9",
-      "width": 37,
-      "height": 52,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:A10",
-      "@type": "PaperSize",
-      "name": "A10",
-      "width": 26,
-      "height": 37,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:B0",
-      "@type": "PaperSize",
-      "name": "B0",
-      "width": 1000,
-      "height": 1414,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:B1",
-      "@type": "PaperSize", 
-      "name": "B1",
-      "width": 707,
-      "height": 1000,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:B2",
-      "@type": "PaperSize",
-      "name": "B2",
-      "width": 500,
-      "height": 707,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:B3",
-      "@type": "PaperSize",
-      "name": "B3",
-      "width": 353,
-      "height": 500,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:B4",
-      "@type": "PaperSize",
-      "name": "B4",
-      "width": 250,
-      "height": 353,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:B5",
-      "@type": "PaperSize",
-      "name": "B5",
-      "width": 176,
-      "height": 250,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:B6",
-      "@type": "PaperSize",
-      "name": "B6",
-      "width": 125,
-      "height": 176,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:B7",
-      "@type": "PaperSize",
-      "name": "B7",
-      "width": 88,
-      "height": 125,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:B8",
-      "@type": "PaperSize",
-      "name": "B8",
-      "width": 62,
-      "height": 88,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:B9",
-      "@type": "PaperSize",
-      "name": "B9",
-      "width": 44,
-      "height": 62,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:B10",
-      "@type": "PaperSize",
-      "name": "B10",
-      "width": 31,
-      "height": 44,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:C0",
-      "@type": "PaperSize",
-      "name": "C0",
-      "width": 917,
-      "height": 1297,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:C1",
-      "@type": "PaperSize",
-      "name": "C1",
-      "width": 648,
-      "height": 917,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:C2",
-      "@type": "PaperSize",
-      "name": "C2",
-      "width": 458,
-      "height": 648,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:C3",
-      "@type": "PaperSize",
-      "name": "C3",
-      "width": 324,
-      "height": 458,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:C4",
-      "@type": "PaperSize",
-      "name": "C4",
-      "width": 229,
-      "height": 324,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:C5",
-      "@type": "PaperSize",
-      "name": "C5",
-      "width": 162,
-      "height": 229,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:C6",
-      "@type": "PaperSize",
-      "name": "C6",
-      "width": 114,
-      "height": 162,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:C7",
-      "@type": "PaperSize",
-      "name": "C7",
-      "width": 81,
-      "height": 114,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:C8",
-      "@type": "PaperSize",
-      "name": "C8",
-      "width": 57,
-      "height": 81,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:C9",
-      "@type": "PaperSize",
-      "name": "C9",
-      "width": 40,
-      "height": 57,
-      "unit": "mm"
-    },
-    {
-      "@id": "din:C10",
-      "@type": "PaperSize",
-      "name": "C10",
-      "width": 28,
-      "height": 40,
-      "unit": "mm"
-    }
-  ]
+    "@graph": [
+        {
+            "@type": "schema:DefinedTermSet",
+            "@id": "din:DINPaperSizes",
+            "identifier": "DIN Paper Sizes",
+            "name": "DIN Paper Sizes",
+            "conformsTo": [
+                "https://www.iso.org/standard/36631.html",
+                "https://www.iso.org/standard/36632.html"
+            ],
+            "schema:hasPart": [
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:A0",
+                    "identifier": "DIN A0",
+                    "name": "A0",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 841,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 1189,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:A1",
+                    "identifier": "DIN A1",
+                    "name": "A1",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 594,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 841,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:A2",
+                    "identifier": "DIN A2",
+                    "name": "A2",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 420,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 594,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:A3",
+                    "identifier": "DIN A3",
+                    "name": "A3",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 297,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 420,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:A4",
+                    "identifier": "DIN A4",
+                    "name": "A4",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 210,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 297,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:A5",
+                    "identifier": "DIN A5",
+                    "name": "A5",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 148,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 210,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:A6",
+                    "identifier": "DIN A6",
+                    "name": "A6",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 105,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 148,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:A7",
+                    "identifier": "DIN A7",
+                    "name": "A7",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 74,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 105,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:A8",
+                    "identifier": "DIN A8",
+                    "name": "A8",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 52,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 74,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:A9",
+                    "identifier": "DIN A9",
+                    "name": "A9",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 37,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 52,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:A10",
+                    "identifier": "DIN A10",
+                    "name": "A10",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 26,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 37,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:B0",
+                    "identifier": "DIN B0",
+                    "name": "B0",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 1000,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 1414,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:B1",
+                    "identifier": "DIN B1",
+                    "name": "B1",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 707,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 1000,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:B2",
+                    "identifier": "DIN B2",
+                    "name": "B2",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 500,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 707,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:B3",
+                    "identifier": "DIN B3",
+                    "name": "B3",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 353,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 500,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:B4",
+                    "identifier": "DIN B4",
+                    "name": "B4",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 250,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 353,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:B5",
+                    "identifier": "DIN B5",
+                    "name": "B5",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 176,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 250,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:B6",
+                    "identifier": "DIN B6",
+                    "name": "B6",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 125,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 176,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:B7",
+                    "identifier": "DIN B7",
+                    "name": "B7",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 88,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 125,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:B8",
+                    "identifier": "DIN B8",
+                    "name": "B8",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 62,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 88,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:B9",
+                    "identifier": "DIN B9",
+                    "name": "B9",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 44,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 62,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:B10",
+                    "identifier": "DIN B10",
+                    "name": "B10",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 31,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 44,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:C0",
+                    "identifier": "DIN C0",
+                    "name": "C0",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 917,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 1297,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:C1",
+                    "identifier": "DIN C1",
+                    "name": "C1",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 648,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 917,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:C2",
+                    "identifier": "DIN C2",
+                    "name": "C2",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 458,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 648,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:C3",
+                    "identifier": "DIN C3",
+                    "name": "C3",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 324,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 458,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:C4",
+                    "identifier": "DIN C4",
+                    "name": "C4",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 229,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 324,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:C5",
+                    "identifier": "DIN C5",
+                    "name": "C5",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 162,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 229,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:C6",
+                    "identifier": "DIN C6",
+                    "name": "C6",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 114,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 162,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:C7",
+                    "identifier": "DIN C7",
+                    "name": "C7",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 81,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 114,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:C8",
+                    "identifier": "DIN C8",
+                    "name": "C8",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 57,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 81,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:C9",
+                    "identifier": "DIN C9",
+                    "name": "C9",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 40,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 57,
+                        "unitCode": "MMT"
+                    }
+                },
+                {
+                    "@type": "schema:DefinedTerm",
+                    "@id": "din:C10",
+                    "identifier": "DIN C10",
+                    "name": "C10",
+                    "isPartOf": "din:DINPaperSizes",
+                    "width": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 28,
+                        "unitCode": "MMT"
+                    },
+                    "height": {
+                        "@type": "schema:Measurement",
+                        "schema:value": 40,
+                        "unitCode": "MMT"
+                    }
+                }
+            ]
+        }
+    ]
 }
